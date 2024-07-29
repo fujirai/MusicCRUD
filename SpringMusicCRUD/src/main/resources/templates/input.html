@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+<h1>楽曲操作システム★登録</h1>
+<form th:action="@{entry}" method="post">
+<input type="text" name="song_name" required>
+<input type="text" name="singer" required>
+<button type="submit">登録</button> 
+</form>
+</body>
+</html>

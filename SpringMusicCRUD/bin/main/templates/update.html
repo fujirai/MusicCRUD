@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+<h1>楽曲システム★更新</h1>
+<form th:action="@{up}" method="post">
+<input type="text" name="song_id">
+<button type="submit">選択</button>
+</form> 
+<table border="1">
+<tr>
+	<th>曲番号</th>
+	<th>曲名</th>
+	<th>歌手名</th>
+</tr>
+<tr th:each="list:${view}">
+	<td th:text="${list.song_id}"></td>
+	<td th:text="${list.song_name}"></td>
+	<td th:text="${list.singer}"></td>
+</tr>
+</table>
+</body>
+</html>

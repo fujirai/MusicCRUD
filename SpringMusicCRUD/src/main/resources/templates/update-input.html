@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="music.css">
+</head>
+<body>
+<h1>楽曲操作システム★更新入力</h1>
+<form th:action="@{update}" method="post" th:object="${select}">
+曲名：<input type="text" name="song_name" th:field="*{song_name}"　required>
+歌手名：<input type="text" name="singer" th:field="*{singer}"　required> 
+<input type="hidden" name="song_id" th:field="*{song_id}">
+<button type="submit">更新</button>
+<button type="button" onclick="history.back()">戻る</button>
+</form>
+</body>
+</html>
